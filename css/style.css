@@ -1,10 +1,13 @@
 :root {
-    --primary-blue: #1e40af;
-    --secondary-blue: #3b82f6;
-    --accent-orange: #f97316;
-    --light-bg: #f8fafc;
-    --dark-text: #0f172a;
-    --light-text: #64748b;
+    --primary-dark: #1a1a1a;
+    --secondary-dark: #2d3436;
+    --gunmetal: #36454f;
+    --charcoal: #3d3d3d;
+    --accent-bronze: #b8860b;
+    --light-bg: #0f0f0f;
+    --dark-text: #e8e8e8;
+    --light-text: #a0a0a0;
+    --border-color: #424242;
 }
 
 /* Typography */
@@ -24,8 +27,8 @@ html {
 
 /* Navigation Bar */
 .navbar {
-    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-blue) 100%) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, var(--primary-dark) 0%, var(--secondary-dark) 100%) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand {
@@ -46,12 +49,12 @@ html {
 }
 
 .nav-link:hover {
-    color: var(--accent-orange) !important;
+    color: var(--accent-bronze) !important;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
     min-height: 550px;
     display: flex;
     align-items: center;
@@ -93,28 +96,30 @@ html {
 /* Card hover effects */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
+    background-color: var(--charcoal);
+    color: var(--dark-text);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.15) !important;
-    border-color: var(--secondary-blue);
+    box-shadow: 0 20px 40px rgba(184, 134, 11, 0.2) !important;
+    border-color: var(--accent-bronze);
 }
 
 .card-body i {
-    color: var(--secondary-blue);
+    color: var(--accent-bronze);
     transition: color 0.3s ease;
 }
 
 .card:hover .card-body i {
-    color: var(--accent-orange);
+    color: #d4af37;
 }
 
 .card-title {
-    color: var(--primary-blue);
+    color: var(--accent-bronze);
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -129,9 +134,7 @@ section {
     margin-top: 0;
     padding: 5rem 0;
 }
-
-section h2 {
-    color: var(--primary-blue);
+accent-bronze);
     font-weight: 800;
     margin-bottom: 3rem;
     position: relative;
@@ -148,40 +151,44 @@ section h2::after {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
+    background: linear-gradient(90deg, var(--accent-bronze), #d4af37
+    height: 4px;
     background: linear-gradient(90deg, var(--secondary-blue), var(--accent-orange));
     border-radius: 2px;
 }
 
-/* Button styling */
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-    border: none;
+/* Button styling */gunmetal), var(--secondary-dark));
+    border: 2px solid var(--accent-bronze);
     border-radius: 8px;
     padding: 0.75rem 2rem;
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: var(--accent-bronze);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+    background: linear-gradient(135deg, var(--accent-bronze), var(--gunmetal));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(184, 134, 11, 0.4);
+    color: var(--charcoalcondary-blue), var(--primary-blue));
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
 }
 
 .btn-primary:active {
     transform: translateY(0);
-}
-
-/* About section styling */
-#about {
-    background-color: var(--light-bg);
+}primary-dark);
 }
 
 #about .fs-5 {
-    color: var(--light-text);
+    color: var(--dark-text);
     margin-bottom: 1.5rem;
 }
 
+#about .bg-light {
+    background-color: var(--charcoal) !important;
+    border: 2px solid var(--border-color);
+    border-left: 5px solid var(--accent-bronz
 #about .bg-light {
     background-color: white !important;
     border: 2px solid #e2e8f0;
@@ -191,32 +198,34 @@ section h2::after {
 #about li {
     color: var(--dark-text);
     font-weight: 500;
-}
-
-/* Form styling */
-.form-label {
-    color: var(--primary-blue);
+}accent-bronze);
     font-weight: 600;
     margin-bottom: 0.7rem;
 }
 
 .form-control {
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--border-color);
     border-radius: 8px;
     padding: 0.8rem 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-control:focus {
-    border-color: var(--secondary-blue);
-    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+    background-color: var(--charcoal);
     color: var(--dark-text);
 }
 
-/* Contact section */
-#contact {
-    background-color: var(--light-bg);
+.form-control:focus {
+    border-color: var(--accent-bronze);
+    box-shadow: 0 0 0 0.2rem rgba(184, 134, 11, 0.2
+
+.form-control:focus {
+    border-color: var(--secondary-blue);
+    box-shadow: 0 0 0 0.2remprimary-dark);
 }
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, var(--primary-dark) 0%, var(--secondary-dark) 100%) !important;
+    margin-top: auto;
+    color: var(--dark-text)
 
 /* Footer */
 footer {
