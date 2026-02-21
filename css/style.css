@@ -37,10 +37,15 @@ html {
     letter-spacing: 0.5px;
     font-weight: 700;
     color: white !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.navbar-brand i {
-    margin-right: 0.5rem;
+.logo-img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
 .nav-link {
